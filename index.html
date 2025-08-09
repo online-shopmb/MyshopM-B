@@ -17,7 +17,6 @@
       color: #333;
     }
 
-    /* Блок 1: Телефон, Лого и Социални */
     .header-block {
       display: flex;
       justify-content: space-between;
@@ -127,7 +126,7 @@
       max-width: 750px;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 40px; /* добавено разстояние между продуктите */
+      margin-bottom: 40px;
     }
 
     .product-title {
@@ -140,18 +139,19 @@
 
     .product-gallery {
       display: flex;
-      flex-wrap: wrap; /* дава възможност снимките да се пренасят */
+      flex-wrap: nowrap; /* снимките винаги на един ред */
       gap: 15px;
       justify-content: center;
+      overflow-x: hidden; /* маха хоризонталния скрол */
       margin-bottom: 25px;
     }
 
     .product-gallery a img {
-      width: 250px;
+      width: 200px; /* по-малки снимки, за да влязат в реда */
       height: auto;
       border-radius: 12px;
-      transition: transform 0.3s ease;
       cursor: pointer;
+      transition: transform 0.3s ease;
       box-shadow: 0 3px 7px rgba(0,0,0,0.1);
     }
 
@@ -214,11 +214,12 @@
 
       .product-gallery {
         justify-content: center;
+        overflow-x: auto; /* за мобилни устройства - позволява скрол ако е нужно */
       }
 
       .product-gallery a img {
-        width: 100%;
-        max-width: 300px;
+        width: 150px; /* по-малки снимки за мобилни */
+        height: auto;
       }
     }
   </style>
@@ -257,7 +258,7 @@
     Тук ще откриете ръчно изработени продукти, създадени с любов и внимание.
   </div>
 
-  <!-- Блок 3: Продукт 1 -->
+  <!-- Продукт 1 -->
   <div class="product-block">
     <h2 class="product-title">Кутия с фоамени рози</h2>
 
@@ -275,7 +276,7 @@
       ✅ пълна с висококачествени фоамени рози. Перфектна изненада за любим човек.<br><br>
       ✅ Ръчно подредени фоамени рози в червено и бяло<br>
       ✅ Елегантна кутия с прозрачен капак и декоративна панделка<br>
-      Поръчай сега: <a href="tel:0893231348"><strong>0893 231 348</strong></a>
+      <br>Поръчай сега: <a href="tel:0893231348">0893 231 348</a>
     </div>
 
     <div class="product-price">
@@ -283,27 +284,27 @@
     </div>
   </div>
 
-  <!-- Блок 4: Продукт 2 -->
+  <!-- Продукт 2 -->
   <div class="product-block">
     <h2 class="product-title">Букет от 51 рози</h2>
 
     <div class="product-gallery">
-      <a href="buketslenta.jpg" data-lightbox="buketslenta" data-title="Букет от 51 рози - изглед 1">
-        <img src="buketslenta.jpg" alt="Букет от 51 рози - изглед 1">
+      <a href="buketslenta.jpg" data-lightbox="bouquet51" data-title="Букет от 51 червени рози - изглед 1">
+        <img src="buketslenta.jpg" alt="Букет от 51 червени рози">
       </a>
-      <a href="buketslenta2.jpg" data-lightbox="buketslenta" data-title="Букет от 51 рози - изглед 2">
-        <img src="buketslenta2.jpg" alt="Букет от 51 рози - изглед 2">
+      <a href="buketslenta2.jpg" data-lightbox="bouquet51" data-title="Букет от 51 червени рози - изглед 2">
+        <img src="buketslenta2.jpg" alt="Букет от 51 червени рози">
       </a>
-      <a href="buketslenta3.jpg" data-lightbox="buketslenta" data-title="Букет от 51 рози - изглед 3">
-        <img src="buketslenta3.jpg" alt="Букет от 51 рози - изглед 3">
+      <a href="buketslenta3.jpg" data-lightbox="bouquet51" data-title="Букет от 51 червени рози - изглед 3">
+        <img src="buketslenta3.jpg" alt="Букет от 51 червени рози">
       </a>
     </div>
 
     <div class="product-description">
-      ✅ Букет от 51 червени рози е символ на страстта и любовта.<br>
+      ✅ Букет от 51 е символ на страстта и любовта.<br>
       ✅ Всяка роза е внимателно подбрана и подредена, за да направи специалния момент незабравим.<br>
       ✅ Перфектен подарък за празник или изненада за любим човек.<br>
-      Поръчай сега: <a href="tel:0893231348"><strong>0893 231 348</strong></a>
+      <br>Поръчай сега: <a href="tel:0893231348">0893 231 348</a>
     </div>
 
     <div class="product-price">
@@ -311,16 +312,16 @@
     </div>
   </div>
 
-  <!-- Блок 5: Продукт 3 -->
+  <!-- Продукт 3 -->
   <div class="product-block">
-    <h2 class="product-title">Сърце от рози с буква по ваш избор !</h2>
+    <h2 class="product-title">Сърце от рози с буква по ваш избор!</h2>
 
     <div class="product-gallery">
-      <a href="sarcesbukva.jpg" data-lightbox="sarcesbukva" data-title="Сърце от рози с буква - изглед 1">
-        <img src="sarcesbukva.jpg" alt="Сърце от рози с буква - изглед 1">
+      <a href="sarcesbukva.jpg" data-lightbox="heartroses" data-title="Сърце от рози с буква - изглед 1">
+        <img src="sarcesbukva.jpg" alt="Сърце от рози с буква">
       </a>
-      <a href="sarcesbukva2.jpg" data-lightbox="sarcesbukva" data-title="Сърце от рози с буква - изглед 2">
-        <img src="sarcesbukva2.jpg" alt="Сърце от рози с буква - изглед 2">
+      <a href="sarcesbukva2.jpg" data-lightbox="heartroses" data-title="Сърце от рози с буква - изглед 2">
+        <img src="sarcesbukva2.jpg" alt="Сърце от рози с буква">
       </a>
     </div>
 
@@ -328,7 +329,7 @@
       ✅ Уникален дизайн във формата на сърце<br>
       ✅ Цвят и буква по ваш избор.<br>
       ✅ Перфектен подарък за всякакъв повод.<br>
-      Поръчай сега: <a href="tel:0893231348"><strong>0893 231 348</strong></a>
+      <br>Поръчай сега: <a href="tel:0893231348">0893 231 348</a>
     </div>
 
     <div class="product-price">
@@ -336,27 +337,27 @@
     </div>
   </div>
 
-  <!-- Блок 6: Продукт 4 -->
+  <!-- Продукт 4 -->
   <div class="product-block">
     <h2 class="product-title">Букет от 99 рози</h2>
 
     <div class="product-gallery">
-      <a href="99rozi.jpg" data-lightbox="99roses" data-title="Букет от 99 рози - изглед 1">
-        <img src="99rozi.jpg" alt="Букет от 99 рози - изглед 1">
+      <a href="99rozi.jpg" data-lightbox="bouquet99" data-title="Букет от 99 рози - изглед 1">
+        <img src="99rozi.jpg" alt="Букет от 99 рози">
       </a>
-      <a href="99rozi2.jpg" data-lightbox="99roses" data-title="Букет от 99 рози - изглед 2">
-        <img src="99rozi2.jpg" alt="Букет от 99 рози - изглед 2">
+      <a href="99rozi2.jpg" data-lightbox="bouquet99" data-title="Букет от 99 рози - изглед 2">
+        <img src="99rozi2.jpg" alt="Букет от 99 рози">
       </a>
-      <a href="99rozi3.jpg" data-lightbox="99roses" data-title="Букет от 99 рози - изглед 3">
-        <img src="99rozi3.jpg" alt="Букет от 99 рози - изглед 3">
+      <a href="99rozi3.jpg" data-lightbox="bouquet99" data-title="Букет от 99 рози - изглед 3">
+        <img src="99rozi3.jpg" alt="Букет от 99 рози">
       </a>
     </div>
 
     <div class="product-description">
-      ✅ Импресивен букет от 99 свежи рози<br>
-      ✅ Символ на безкрайна любов и уважение<br>
-      ✅ Перфектен подарък за специални моменти<br>
-      Поръчай сега: <a href="tel:0893231348"><strong>0893 231 348</strong></a>
+      ✅ Екстравагантен букет от 99 свежи рози, който говори повече от хиляда думи.<br>
+      ✅ Израз на изключителна любов и внимание.<br>
+      ✅ Перфектен избор за големи празници и специални моменти.<br>
+      <br>Поръчай сега: <a href="tel:0893231348">0893 231 348</a>
     </div>
 
     <div class="product-price">
@@ -381,4 +382,6 @@
 
 </body>
 </html>
+
+
 
