@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <title>M&B-ART Онлайн магазин</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      background-color: #f5f7f6;
+      color: #333;
+    }
+
+    /* Блок 1: Телефон, Лого и Социални */
+    .header-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+
+    /* Телефон */
+    .phone {
+      font-weight: bold;
+      color: #0a7f2d;
+      font-size: 1.2em;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 150px;
+    }
+
+    .phone span {
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+
+    .phone i {
+      margin-right: 5px;
+      color: #0a7f2d;
+    }
+
+    .phone a {
+      text-decoration: none;
+      color: #0a7f2d;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    /* Лого */
+    .logo {
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+      text-align: center;
+      margin: 0 20px;
+    }
+    .logo img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Социални мрежи - вертикално подредени */
+    .socials {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 1.2em;
+      min-width: 130px;
+      gap: 18px;
+    }
+
+    .socials a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+
+    .socials .instagram {
+      color: #e4405f;
+      font-size: 1.8em;
+    }
+
+    .socials .facebook {
+      color: #3b5998;
+      font-size: 1.8em;
+    }
+
+    .socials .viber {
+      color: #7360f2;
+      font-size: 1.8em;
+    }
+
+    /* Блок 2: Описание над продуктите */
+    .description-block {
+      background-color: #e9f1e7;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 40px;
+      font-style: italic;
+      font-weight: normal;
+      color: #444;
+      font-size: 1.2em;
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+      box-shadow: 0 2px 6px rgba(10,127,45,0.15);
+    }
+
+    /* Блок 3: Продукт - заглавие, снимки, описание, цена */
+    .product-block {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 25px 20px 30px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .product-title {
+      text-align: left;
+      font-size: 1.7em;
+      color: #222;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .product-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 25px;
+      justify-content: center;
+    }
+
+    .product-gallery a img {
+      width: 250px;
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+    }
+
+    .product-gallery a img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .product-description {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 20px;
+      padding-left: 10px;
+    }
+
+    .product-price {
+      font-weight: bold;
+      font-size: 1.3em;
+      color: #0a7f2d;
+      padding-left: 10px;
+    }
+
+    /* Футър */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 15px;
+      background-color: #e0e6e0;
+      color: #555;
+      font-size: 0.9em;
+      border-radius: 8px;
+    }
+
+    /* Адаптивност */
+    @media (max-width: 720px) {
+      .header-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .phone, .socials {
+        align-items: center;
+        min-width: auto;
+      }
+
+      .socials {
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .socials a {
+        font-size: 1em;
+      }
+
+      .product-gallery {
+        justify-content: center;
+      }
+
+      .product-gallery a img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Блок 1: Телефон, Лого и Социални -->
+  <div class="header-block">
+    <div class="phone">
+      <span>Тел. за поръчки:</span>
+      <div>
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:0893231348">0893 231 348</a>
+      </div>
+    </div>
+
+    <div class="logo">
+      <img src="logo.png" alt="M&B-ART Лого" />
+    </div>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/m.b.art2015/" target="_blank" class="instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.facebook.com/people/подаръчета-за-всеки-повод/61550235939108/" target="_blank" class="facebook">
+        <i class="fab fa-facebook-square"></i> Facebook
+      </a>
+      <a href="viber://chat?number=%2B359893231348" class="viber">
+        <i class="fab fa-viber"></i> Viber
+      </a>
+    </div>
+  </div>
+
+  <!-- Блок 2: Описание -->
+  <div class="description-block">
+    Тук ще откриете ръчно изработени продукти, създадени с любов и внимание.
+  </div>
+
+  <!-- Блок 3: Продукт -->
+  <div class="product-block">
+    <h2 class="product-title">Кутия с фоамени рози</h2>
+
+    <div class="product-gallery">
+      <a href="1.jpg" data-lightbox="foamroses" data-title="Кутия с фоамени рози - изглед отпред">
+        <img src="1.jpg" alt="Кутия с фоамени рози">
+      </a>
+      <a href="2.jpg" data-lightbox="foamroses" data-title="Кутия с фоамени рози - страничен изглед">
+        <img src="2.jpg" alt="Кутия с фоамени рози - страничен изглед">
+      </a>
+    </div>
+
+    <div class="product-description">
+      ✅ Изключително нежна и стилна подаръчна кутия с форма на сърце<br>
+      ✅ пълна с висококачествени фоамени рози. Перфектна изненада за любим човек.<br><br>
+      ✅ Ръчно подредени фоамени рози в червено и бяло<br>
+      ✅ Елегантна кутия с прозрачен капак и декоративна панделка
+    </div>
+
+    <div class="product-price">
+      Цена: 40 лв
+    </div>
+  </div>
+
+  <!-- Футър -->
+  <footer>
+    &copy; 2025 M&B-ART | Телефон: 0893 231 348
+  </footer>
+
+  <!-- Lightbox скрипт -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+  <script>
+    // Забраняваме zoom с колелцето на мишката
+    lightbox.option({
+      'disableScrolling': true,
+      'wrapAround': true,
+      'showImageNumberLabel': false,
+      'fadeDuration': 300,
+      'resizeDuration': 300
+    });
+  </script>
+
+</body>
+</html>
