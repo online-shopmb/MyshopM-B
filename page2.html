@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <title>M&B-ART Онлайн магазин - Страница 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      background: linear-gradient(to bottom, #fdfcfb, #e9f1e7);
+      color: #333;
+    }
+
+    .header-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+
+    .phone {
+      font-weight: bold;
+      color: #0a7f2d;
+      font-size: 1.2em;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 150px;
+    }
+
+    .phone span { font-size: 1.1em; margin-bottom: 5px; }
+    .phone i { margin-right: 5px; color: #0a7f2d; }
+    .phone a { text-decoration: none; color: #0a7f2d; font-weight: bold; font-size: 1.2em; }
+
+    .logo {
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+      text-align: center;
+      margin: 0 20px;
+    }
+    .logo img { max-width: 100%; height: auto; }
+
+    .socials {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 1.2em;
+      min-width: 130px;
+      gap: 18px;
+    }
+
+    .socials a { text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 1.1em; }
+    .socials .instagram { color: #e4405f; font-size: 1.8em; }
+    .socials .facebook { color: #3b5998; font-size: 1.8em; }
+    .socials .viber { color: #7360f2; font-size: 1.8em; }
+
+    .description-block {
+      background-color: #e9f1e7;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 40px;
+      font-style: italic;
+      font-weight: normal;
+      color: #444;
+      font-size: 1.2em;
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+      box-shadow: 0 2px 6px rgba(10,127,45,0.15);
+    }
+
+    .product-block {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 25px 20px 30px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
+
+    .product-title {
+      text-align: left;
+      font-size: 1.7em;
+      color: #222;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .product-gallery {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap; /* стабилизира подскачането */
+      margin-bottom: 25px;
+    }
+
+    .product-gallery a img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      display: block;
+    }
+
+    .product-gallery a img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .product-description { font-size: 1.1em; line-height: 1.6; color: #333; margin-bottom: 10px; padding-left: 10px; }
+    .product-description a { color: #0a7f2d; text-decoration: none; font-weight: bold; }
+
+    .product-price { font-weight: bold; font-size: 1.3em; color: #0a7f2d; padding-left: 10px; margin-bottom: 10px; }
+
+    .order-btn {
+      display: inline-block;
+      padding: 10px 15px;
+      margin-top: 5px;
+      background: #28a745;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .order-btn:hover { background: #218838; }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 15px;
+      background-color: #e0e6e0;
+      color: #555;
+      font-size: 0.9em;
+      border-radius: 8px;
+    }
+
+    .pagination { text-align: center; margin-top: 30px; }
+    .pagination a { display: inline-block; margin: 0 5px; padding: 8px 12px; text-decoration: none; border: 1px solid #333; border-radius: 6px; color: #333; }
+    .pagination a.active { background-color: #333; color: white; }
+
+    @media (max-width: 720px) {
+      .header-block { flex-direction: column; align-items: center; gap: 20px; }
+      .phone, .socials { align-items: center; min-width: auto; }
+      .socials { flex-direction: row; gap: 20px; }
+      .socials a { font-size: 1em; }
+      .product-gallery a img { max-width: 150px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header-block">
+  <div class="phone">
+    <span>Тел. за поръчки:</span>
+    <div>
+      <i class="fas fa-phone-alt"></i>
+      <a href="tel:0893231348">0893 231 348</a>
+    </div>
+  </div>
+
+  <div class="logo">
+    <img src="logo.png" alt="M&B-ART Лого" />
+  </div>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/m.b.art2015/" target="_blank" class="instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.facebook.com/people/подаръчета-за-всеки-повод/61550235939108/" target="_blank" class="facebook">
+      <i class="fab fa-facebook-square"></i> Facebook
+    </a>
+    <a href="viber://chat?number=%2B359893231348" class="viber">
+      <i class="fab fa-viber"></i> Viber
+    </a>
+  </div>
+</div>
+<div class="description-block" <span style="font-weight: 600; font-size: 1.2em;">
+<span style="font-style: italic; color: #555;">Тук ще откриете ръчно изработени продукти, създадени с любов и внимание.</span>
+</div>
+ 
+</div>
+
+<!-- Продукт 1 -->
+<div class="product-block">
+  <h2 class="product-title">Букет от 31 фоамени рози</h2>
+  <div class="product-gallery">
+    <a href="sin.jpg" data-lightbox="roses31" data-title="Букет от 31 фоамени рози - изглед 1"><img src="sin.jpg" alt="Букет от 31 фоамени рози"></a>
+    <a href="sin2.jpg" data-lightbox="roses31" data-title="Букет от 31 фоамени рози - изглед 2"><img src="sin2.jpg" alt="Букет от 31 фоамени рози"></a>
+  </div>
+  <div class="product-description">
+    ✅ Красив и елегантен букет от 31 фоамени рози в различни нюанси на синьото и бялото.<br>
+    ✅ Перфектен подарък за специален повод или за да зарадвате любим човек.<br>
+    ✅ Ръчно подреден с внимание към всеки детайл.
+  </div>
+  <div class="product-price">Цена: 35 лв</div>
+  <a href="tel:0893231348" class="order-btn">🛒 Поръчай</a>
+</div>
+
+<!-- Продукт 2 -->
+<div class="product-block">
+  <h2 class="product-title">Букет от 25 рози</h2>
+  <div class="product-gallery">
+    <a href="chervenpeperuda.jpg" data-lightbox="roses25" data-title="Букет от 25 рози"><img src="chervenpeperuda.jpg" alt="Букет от 25 рози"></a>
+  </div>
+  <div class="product-description">
+    ✅ Красив букет от 25 свежи рози.<br>
+    ✅ Перфектен подарък за специален повод или за любим човек.<br>
+    ✅ Ръчно подреден с внимание към детайла.
+  </div>
+  <div class="product-price">Цена: 27 лв</div>
+  <a href="tel:0893231348" class="order-btn">🛒 Поръчай</a>
+</div>
+<!-- Продукт 8 -->
+<div class="product-block">
+  <h2 class="product-title">Букет от 3 рози</h2>
+  <div class="product-gallery">
+    <a href="3rozi.jpg" data-lightbox="product8"><img src="3rozi.jpg" alt="Букет от 3 рози"></a>
+    <a href="3rozi2.jpg" data-lightbox="product8"><img src="3rozi2.jpg" alt="Букет от 3 рози"></a>
+  </div>
+  <div class="product-description">
+    ✅ Малък, но изключително мил букет от 3 свежи рози.<br>
+    ✅ Подходящ за подарък, когато искате да покажете внимание и нежност.<br>
+    ✅ Идеален за малки жестове на любов и приятелство.<br>
+  </div>
+  <div class="product-price">Цена: 5 лв</div>
+  <a href="tel:0893231348" class="order-btn">🛒 Поръчай</a>
+</div>
+
+<div class="pagination">
+  <a href="index.html">1</a>
+  <a href="page2.html" class="active">2</a>
+</div>
+
+<footer>
+  &copy; 2025 M&B-ART | Телефон: 0893 231 348
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox-plus-jquery.min.js"></script>
+<script>
+  lightbox.option({
+    'disableScrolling': true,
+    'wrapAround': true,
+    'showImageNumberLabel': false,
+    'fadeDuration': 200,
+    'resizeDuration': 200,
+    'positionFromTop': 50,
+    'alwaysShowClose': true
+  });
+</script>
+
+</body>
+</html>
