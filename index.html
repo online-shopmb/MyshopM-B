@@ -2,27 +2,17 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8" />
-  <title>M&B-ART Онлайн магазин</title>
+  <title>M&B-ART Онлайн магазин - Страница 1</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DJD810G5SW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DJD810G5SW');
-</script>
-
   <style>
-    body {
+body {
       font-family: 'Montserrat', Arial, sans-serif;
       max-width: 900px;
       margin: 30px auto;
       padding: 0 20px;
-      background-color: #f5f7f6;
+      background: linear-gradient(to bottom, #fdfcfb, #e9f1e7);
       color: #333;
     }
 
@@ -46,22 +36,9 @@
       min-width: 150px;
     }
 
-    .phone span {
-      font-size: 1.1em;
-      margin-bottom: 5px;
-    }
-
-    .phone i {
-      margin-right: 5px;
-      color: #0a7f2d;
-    }
-
-    .phone a {
-      text-decoration: none;
-      color: #0a7f2d;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
+    .phone span { font-size: 1.1em; margin-bottom: 5px; }
+    .phone i { margin-right: 5px; color: #0a7f2d; }
+    .phone a { text-decoration: none; color: #0a7f2d; font-weight: bold; font-size: 1.2em; }
 
     .logo {
       max-width: 300px;
@@ -71,10 +48,7 @@
       text-align: center;
       margin: 0 20px;
     }
-    .logo img {
-      max-width: 100%;
-      height: auto;
-    }
+    .logo img { max-width: 100%; height: auto; }
 
     .socials {
       display: flex;
@@ -85,30 +59,10 @@
       gap: 18px;
     }
 
-    .socials a {
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      font-size: 1.1em;
-    }
-
-    .socials .instagram {
-      color: #e4405f;
-      font-size: 1.8em;
-    }
-
-    .socials .facebook {
-      color: #3b5998;
-      font-size: 1.8em;
-    }
-
-    .socials .viber {
-      color: #7360f2;
-      font-size: 1.8em;
-    }
+    .socials a { text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 1.1em; }
+    .socials .instagram { color: #e4405f; font-size: 1.8em; }
+    .socials .facebook { color: #3b5998; font-size: 1.8em; }
+    .socials .viber { color: #7360f2; font-size: 1.8em; }
 
     .description-block {
       background-color: #e9f1e7;
@@ -148,47 +102,45 @@
 
     .product-gallery {
       display: flex;
-      flex-wrap: nowrap; /* снимките винаги на един ред */
       gap: 15px;
       justify-content: center;
-      overflow-x: hidden; /* маха хоризонталния скрол */
+      flex-wrap: wrap; /* стабилизира подскачането */
       margin-bottom: 25px;
     }
 
     .product-gallery a img {
-      width: 200px; /* по-малки снимки, за да влязат в реда */
+      max-width: 200px;
       height: auto;
       border-radius: 12px;
       cursor: pointer;
       transition: transform 0.3s ease;
       box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      display: block;
     }
 
     .product-gallery a img:hover {
-      transform: scale(1.05);
+      transform: scale(1.08);
       box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
 
-    .product-description {
-      font-size: 1.1em;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 20px;
-      padding-left: 10px;
-    }
+    .product-description { font-size: 1.1em; line-height: 1.6; color: #333; margin-bottom: 10px; padding-left: 10px; }
+    .product-description a { color: #0a7f2d; text-decoration: none; font-weight: bold; }
 
-    .product-description a {
-      color: #0a7f2d;
+    .product-price { font-weight: bold; font-size: 1.3em; color: #0a7f2d; padding-left: 10px; margin-bottom: 10px; }
+
+    .order-btn {
+      display: inline-block;
+      padding: 10px 15px;
+      margin-top: 5px;
+      background: #28a745;
+      color: white;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s;
     }
 
-    .product-price {
-      font-weight: bold;
-      font-size: 1.3em;
-      color: #0a7f2d;
-      padding-left: 10px;
-    }
+    .order-btn:hover { background: #218838; }
 
     footer {
       text-align: center;
@@ -200,254 +152,173 @@
       border-radius: 8px;
     }
 
+    .pagination { text-align: center; margin-top: 30px; }
+    .pagination a { display: inline-block; margin: 0 5px; padding: 8px 12px; text-decoration: none; border: 1px solid #333; border-radius: 6px; color: #333; }
+    .pagination a.active { background-color: #333; color: white; }
+
     @media (max-width: 720px) {
-      .header-block {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .phone, .socials {
-        align-items: center;
-        min-width: auto;
-      }
-
-      .socials {
-        flex-direction: row;
-        gap: 20px;
-      }
-
-      .socials a {
-        font-size: 1em;
-      }
-
-      .product-gallery {
-        justify-content: center;
-        overflow-x: auto; /* за мобилни устройства - позволява скрол ако е нужно */
-      }
-
-      .product-gallery a img {
-        width: 150px; /* по-малки снимки за мобилни */
-        height: auto;
-      }
+      .header-block { flex-direction: column; align-items: center; gap: 20px; }
+      .phone, .socials { align-items: center; min-width: auto; }
+      .socials { flex-direction: row; gap: 20px; }
+      .socials a { font-size: 1em; }
+      .product-gallery a img { max-width: 150px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Блок 1: Телефон, Лого и Социални -->
-  <div class="header-block">
-    <div class="phone">
-      <span>Тел. за поръчки:</span>
-      <div>
-        <i class="fas fa-phone-alt"></i>
-        <a href="tel:0893231348">0893 231 348</a>
-      </div>
-    </div>
-
-    <div class="logo">
-      <img src="logo.png" alt="M&B-ART Лого" />
-    </div>
-
-    <div class="socials">
-      <a href="https://www.instagram.com/m.b.art2015/" target="_blank" class="instagram">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="https://www.facebook.com/people/подаръчета-за-всеки-повод/61550235939108/" target="_blank" class="facebook">
-        <i class="fab fa-facebook-square"></i> Facebook
-      </a>
-      <a href="viber://chat?number=%2B359893231348" class="viber">
-        <i class="fab fa-viber"></i> Viber
-      </a>
+<div class="header-block">
+  <div class="phone">
+    <span>Тел. за поръчки:</span>
+    <div>
+      <i class="fas fa-phone-alt"></i>
+      <a href="tel:0893231348">0893 231 348</a>
     </div>
   </div>
 
-  <!-- Блок 2: Описание -->
-  <div class="description-block">
-    Тук ще откриете ръчно изработени продукти, създадени с любов и внимание.
+  <div class="logo">
+    <img src="logo.png" alt="M&B-ART Лого" />
   </div>
 
-  <!-- Продукт 1 -->
-  <div class="product-block">
-    <h2 class="product-title">Кутия с фоамени рози</h2>
-
-    <div class="product-gallery">
-      <a href="1.jpg" data-lightbox="foamroses" data-title="Кутия с фоамени рози - изглед отпред">
-        <img src="1.jpg" alt="Кутия с фоамени рози">
-      </a>
-      <a href="2.jpg" data-lightbox="foamroses" data-title="Кутия с фоамени рози - страничен изглед">
-        <img src="2.jpg" alt="Кутия с фоамени рози - страничен изглед">
-      </a>
-    </div>
-
-    <div class="product-description">
-      ✅ Изключително нежна и стилна подаръчна кутия с форма на сърце<br>
-      ✅ пълна с висококачествени фоамени рози. Перфектна изненада за любим човек.<br><br>
-      ✅ Ръчно подредени фоамени рози в червено и бяло<br>
-      ✅ Елегантна кутия с прозрачен капак и декоративна панделка<br>
-      <br>Поръчай сега: <a href="tel:0893231348">0893 231 348</a>
-    </div>
-
-    <div class="product-price">
-      Цена: 40 лв
-    </div>
+  <div class="socials">
+    <a href="https://www.instagram.com/m.b.art2015/" target="_blank" class="instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.facebook.com/people/подаръчета-за-всеки-повод/61550235939108/" target="_blank" class="facebook">
+      <i class="fab fa-facebook-square"></i> Facebook
+    </a>
+    <a href="viber://chat?number=%2B359893231348" class="viber">
+      <i class="fab fa-viber"></i> Viber
+    </a>
   </div>
+</div>
 
-  <!-- Продукт 2 -->
-  <div class="product-block">
-    <h2 class="product-title">Букет от 51 рози</h2>
+<div class="description-block">
+  <span style="font-weight: 600; font-size: 1.2em;">Добре дошли в нашият онлайн магазин.</span><br>
+</div>
 
-    <div class="product-gallery">
-      <a href="buketslenta.jpg" data-lightbox="bouquet51" data-title="Букет от 51 червени рози - изглед 1">
-        <img src="buketslenta.jpg" alt="Букет от 51 червени рози">
-      </a>
-      <a href="buketslenta2.jpg" data-lightbox="bouquet51" data-title="Букет от 51 червени рози - изглед 2">
-        <img src="buketslenta2.jpg" alt="Букет от 51 червени рози">
-      </a>
-      <a href="buketslenta3.jpg" data-lightbox="bouquet51" data-title="Букет от 51 червени рози - изглед 3">
-        <img src="buketslenta3.jpg" alt="Букет от 51 червени рози">
-      </a>
-    </div>
-
-    <div class="product-description">
-      ✅ Букет от 51 е символ на страстта и любовта.<br>
-      ✅ Всяка роза е внимателно подбрана и подредена, за да направи специалния момент незабравим.<br>
-      ✅ Перфектен подарък за празник или изненада за любим човек.<br>
-      <br>Поръчай сега: <a href="tel:0893231348">0893 231 348</a>
-    </div>
-
-    <div class="product-price">
-      Цена: 50 лв
-    </div>
+</div>
+<!-- Продукт 1 -->
+<div class="product-block">
+  <h2 class="product-title">Кутия с фоамени рози</h2>
+  <div class="product-gallery">
+    <a href="1.jpg" data-lightbox="product1"><img src="1.jpg" alt=""></a>
+    <a href="2.jpg" data-lightbox="product1"><img src="2.jpg" alt=""></a>
   </div>
-
-  <!-- Продукт 3 -->
-  <div class="product-block">
-    <h2 class="product-title">Сърце от рози с буква по ваш избор!</h2>
-
-    <div class="product-gallery">
-      <a href="sarcesbukva.jpg" data-lightbox="heartroses" data-title="Сърце от рози с буква - изглед 1">
-        <img src="sarcesbukva.jpg" alt="Сърце от рози с буква">
-      </a>
-      <a href="sarcesbukva2.jpg" data-lightbox="heartroses" data-title="Сърце от рози с буква - изглед 2">
-        <img src="sarcesbukva2.jpg" alt="Сърце от рози с буква">
-      </a>
-    </div>
-
-    <div class="product-description">
-      ✅ Уникален дизайн във формата на сърце<br>
-      ✅ Цвят и буква по ваш избор.<br>
-      ✅ Перфектен подарък за всякакъв повод.<br>
-      <br>Поръчай сега: <a href="tel:0893231348">0893 231 348</a>
-    </div>
-
-    <div class="product-price">
-      Цена: 15 лв
-    </div>
+  <div class="product-description">
+    ✅ Изключително нежна и стилна подаръчна кутия с форма на сърце<br>
+    ✅ пълна с висококачествени фоамени рози. Перфектна изненада за любим човек.<br>
+    ✅ Ръчно подредени фоамени рози в червено и бяло<br>
+    ✅ Елегантна кутия с прозрачен капак и декоративна панделка<br>
   </div>
+  <div class="product-price">Цена: 40 лв</div>
+  <a href="tel:0893231348" class="order-btn">🛒 Поръчай</a>
+</div>
 
-  <!-- Продукт 4 -->
-  <div class="product-block">
-    <h2 class="product-title">Букет от 99 рози</h2>
-
-    <div class="product-gallery">
-      <a href="99rozi.jpg" data-lightbox="bouquet99" data-title="Букет от 99 рози - изглед 1">
-        <img src="99rozi.jpg" alt="Букет от 99 рози">
-      </a>
-      <a href="99rozi2.jpg" data-lightbox="bouquet99" data-title="Букет от 99 рози - изглед 2">
-        <img src="99rozi2.jpg" alt="Букет от 99 рози">
-      </a>
-      <a href="99rozi3.jpg" data-lightbox="bouquet99" data-title="Букет от 99 рози - изглед 3">
-        <img src="99rozi3.jpg" alt="Букет от 99 рози">
-      </a>
-    </div>
-
-    <div class="product-description">
-      ✅ Екстравагантен букет от 99 свежи рози, който говори повече от хиляда думи.<br>
-      ✅ Израз на изключителна любов и внимание.<br>
-      ✅ Перфектен избор за големи празници и специални моменти.<br>
-      <br>Поръчай сега: <a href="tel:0893231348">0893 231 348</a>
-    </div>
-
-    <div class="product-price">
-      Цена: 70 лв
-    </div>
+<!-- Продукт 2 -->
+<div class="product-block">
+  <h2 class="product-title">Букет от 51 рози</h2>
+  <div class="product-gallery">
+    <a href="buketslenta.jpg" data-lightbox="product2"><img src="buketslenta.jpg" alt=""></a>
+    <a href="buketslenta2.jpg" data-lightbox="product2"><img src="buketslenta2.jpg" alt=""></a>
+    <a href="buketslenta3.jpg" data-lightbox="product2"><img src="buketslenta3.jpg" alt=""></a>
   </div>
+  <div class="product-description">
+    ✅ Букет от 51 е символ на страстта и любовта.<br>
+    ✅ Всяка роза е внимателно подбрана и подредена, за да направи специалния момент незабравим.<br>
+    ✅ Перфектен подарък за празник или изненада за любим човек.<br>
+  </div>
+  <div class="product-price">Цена: 50 лв</div>
+  <a href="tel:0893231348" class="order-btn">🛒 Поръчай</a>
+</div>
+
+<!-- Продукт 3 -->
+<div class="product-block">
+  <h2 class="product-title">Сърце от рози с буква по ваш избор!</h2>
+  <div class="product-gallery">
+    <a href="sarcesbukva.jpg" data-lightbox="product3"><img src="sarcesbukva.jpg" alt=""></a>
+    <a href="sarcesbukva2.jpg" data-lightbox="product3"><img src="sarcesbukva2.jpg" alt=""></a>
+  </div>
+  <div class="product-description">
+    ✅ Уникален дизайн във формата на сърце<br>
+    ✅ Цвят и буква по ваш избор.<br>
+    ✅ Перфектен подарък за всякакъв повод.<br>
+  </div>
+  <div class="product-price">Цена: 15 лв</div>
+  <a href="tel:0893231348" class="order-btn">🛒 Поръчай</a>
+</div>
+
+<!-- Продукт 4 -->
+<div class="product-block">
+  <h2 class="product-title">Букет от 99 рози</h2>
+  <div class="product-gallery">
+    <a href="99rozi.jpg" data-lightbox="product4"><img src="99rozi.jpg" alt=""></a>
+    <a href="99rozi2.jpg" data-lightbox="product4"><img src="99rozi2.jpg" alt=""></a>
+    <a href="99rozi3.jpg" data-lightbox="product4"><img src="99rozi3.jpg" alt=""></a>
+  </div>
+  <div class="product-description">
+    ✅ Екстравагантен букет от 99 свежи рози, който говори повече от хиляда думи.<br>
+    ✅ Израз на изключителна любов и внимание.<br>
+    ✅ Перфектен избор за големи празници и специални моменти.<br>
+  </div>
+  <div class="product-price">Цена: 70 лв</div>
+  <a href="tel:0893231348" class="order-btn">🛒 Поръчай</a>
+</div>
+
 <!-- Продукт 5 -->
 <div class="product-block">
   <h2 class="product-title">Букет от 15 сапунени рози</h2>
-
   <div class="product-gallery">
-    <a href="rozov.jpg" data-lightbox="soaproses" data-title="Букет от 15 сапунени рози - изглед 1">
-      <img src="rozov.jpg" alt="Букет от 15 сапунени рози">
-    </a>
-    <a href="rozov2.jpg" data-lightbox="soaproses" data-title="Букет от 15 сапунени рози - изглед 2">
-      <img src="rozov2.jpg" alt="Букет от 15 сапунени рози">
-    </a>
-    <a href="rozov3.jpg" data-lightbox="soaproses" data-title="Букет от 15 сапунени рози - изглед 3">
-      <img src="rozov3.jpg" alt="Букет от 15 сапунени рози">
-    </a>
+    <a href="rozov.jpg" data-lightbox="product5"><img src="rozov.jpg" alt=""></a>
+    <a href="rozov2.jpg" data-lightbox="product5"><img src="rozov2.jpg" alt=""></a>
+    <a href="rozov3.jpg" data-lightbox="product5"><img src="rozov3.jpg" alt=""></a>
   </div>
-
   <div class="product-description">
     ✅ Нежен букет от 15 сапунени рози, които съчетават красота и аромат.<br>
     ✅ Перфектен избор за дълготраен подарък без грижи.<br>
-    ✅ Подходящ за всякакъв повод .<br>
-    <br>Поръчай сега: <a href="tel:0893231348">0893 231 348</a>
+    ✅ Подходящ за всякакъв повод.<br>
   </div>
-
-  <div class="product-price">
-    Цена: 30 лв
-  </div>
+  <div class="product-price">Цена: 30 лв</div>
+  <a href="tel:0893231348" class="order-btn">🛒 Поръчай</a>
 </div>
+
 <!-- Продукт 6 -->
 <div class="product-block">
   <h2 class="product-title">Букет от 21 рози</h2>
-
   <div class="product-gallery">
-    <a href="cherven.jpg" data-lightbox="bouquet21" data-title="Букет от 21 рози - изглед 1">
-      <img src="cherven.jpg" alt="Букет от 21 рози">
-    </a>
-    <a href="cherven2.jpg" data-lightbox="bouquet21" data-title="Букет от 21 рози - изглед 2">
-      <img src="cherven2.jpg" alt="Букет от 21 рози">
-    </a>
-    <a href="cherven3.jpg" data-lightbox="bouquet21" data-title="Букет от 21 рози - изглед 3">
-      <img src="cherven3.jpg" alt="Букет от 21 рози">
-    </a>
+    <a href="cherven.jpg" data-lightbox="product6"><img src="cherven.jpg" alt=""></a>
+    <a href="cherven2.jpg" data-lightbox="product6"><img src="cherven2.jpg" alt=""></a>
+    <a href="cherven3.jpg" data-lightbox="product6"><img src="cherven3.jpg" alt=""></a>
   </div>
-
   <div class="product-description">
     ✅ Красив букет от 21 свежи рози, символ на елегантност и стил.<br>
     ✅ Идеален подарък за специални моменти и близки хора.<br>
     ✅ Подчертава чувствата с всяка роза.<br>
-    <br>Поръчай сега: <a href="tel:0893231348">0893 231 348</a>
   </div>
-
-  <div class="product-price">
-    Цена: 20 лв
-  </div>
+  <div class="product-price">Цена: 20 лв</div>
+  <a href="tel:0893231348" class="order-btn">🛒 Поръчай</a>
 </div>
 
-  <footer>
-    &copy; 2025 M&B-ART | Телефон: 0893 231 348
-  </footer>
+<div class="pagination">
+  <a href="index.html" class="active">1</a>
+  <a href="page2.html">2</a>
+</div>
+<footer>
+  &copy; 2025 M&B-ART | Телефон: 0893 231 348
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
-  <script>
-    lightbox.option({
-      'disableScrolling': true,
-      'wrapAround': true,
-      'showImageNumberLabel': false,
-      'fadeDuration': 300,
-      'resizeDuration': 300
-    });
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox-plus-jquery.min.js"></script>
+<script>
+  lightbox.option({
+    'disableScrolling': true,
+    'wrapAround': true,
+    'showImageNumberLabel': false,
+    'fadeDuration': 200,
+    'resizeDuration': 200,
+    'positionFromTop': 50,
+    'alwaysShowClose': true
+  });
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
